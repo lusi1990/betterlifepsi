@@ -21,7 +21,7 @@ from flask import current_app
 try:
     config.set_main_option('sqlalchemy.url', current_app.config.get('SQLALCHEMY_DATABASE_URI'))
 except TypeError:
-    log.warn('Failed to get postgres DSN. Did you set DATABASE_URL '
+    log.warning('Failed to get postgres DSN. Did you set DATABASE_URL '
              'environment variable?')
 target_metadata = current_app.extensions['migrate'].db.metadata
 
