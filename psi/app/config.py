@@ -11,11 +11,14 @@ class BaseConfig(object):
     BABEL_DEFAULT_LOCALE = 'en_US'
     BABEL_DEFAULT_TIMEZONE = 'CST'
     SQLALCHEMY_ECHO = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@127.0.0.1:5432/psi'
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = 'secret'
+    # SECRET_KEY = os.environ.get('SECRET_KEY')
     SECURITY_PASSWORD_HASH = 'pbkdf2_sha512'
-    SECURITY_PASSWORD_SALT = os.environ.get('SECURITY_PASSWORD_SALT')
+    SECURITY_PASSWORD_SALT = 'salt'
+    # SECURITY_PASSWORD_SALT = os.environ.get('SECURITY_PASSWORD_SALT')
     SECURITY_REGISTERABLE = False
     SECURITY_CONFIRMABLE = False
     SECURITY_RECOVERABLE = False
