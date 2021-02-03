@@ -27,13 +27,13 @@ class EnumValues(db.Model, DataSecurityMixin):
         
     @staticmethod
     def get_list(v_code):
-        var = EnumValue.get_by_code(v_code)
+        var = EnumValues.get(v_code)
         lst = var.display.split(",")
         return [v.strip() for v in lst]
 
     @staticmethod
     def get_bool(v_code):
-        return (EnumValue.get_by_code(v_code).display in
+        return (EnumValues.get(v_code).display in
                 ['True', 'true', '1', 'Yes', 'yes', 'Y', 'y'])        
 
     @staticmethod
