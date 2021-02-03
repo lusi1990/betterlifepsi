@@ -208,14 +208,14 @@ def init_admin_views(app, db):
         menu_icon_type=ICON_TYPE_GLYPH,
         menu_icon_value='glyphicon-eye-close')
     )
-    admin_views.add_view(OrganizationAdmin(
-        Organization,
-        db_session,
-        name=lazy_gettext("Organization"),
-        category=lazy_gettext('Settings'),
-        menu_icon_type=ICON_TYPE_GLYPH,
-        menu_icon_value='glyphicon-user')
-    )
+    # admin_views.add_view(OrganizationAdmin(
+    #     Organization,
+    #     db_session,
+    #     name=lazy_gettext("Organization"),
+    #     category=lazy_gettext('Settings'),
+    #     menu_icon_type=ICON_TYPE_GLYPH,
+    #     menu_icon_value='glyphicon-user')
+    # )
     admin_views.add_view(EnumValuesAdmin(
         EnumValues,
         db_session,
